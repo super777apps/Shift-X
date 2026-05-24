@@ -133,3 +133,15 @@ textarea:focus {
     0 0 10px rgba(255,215,0,0.06),
     0 5px 15px rgba(0,0,0,0.45);
 }
+
+select {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,215,0,0.3);
+  background: #161616;
+  color: white;
+  box-sizing: border-box;
+}
