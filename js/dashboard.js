@@ -4,12 +4,15 @@ import {
   collection,
   query,
   where,
-  onSnapshot
+  onSnapshot,
+  doc,
+  getDoc
 }
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 import {
-  onAuthStateChanged
+  onAuthStateChanged,
+  signOut
 }
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
@@ -28,16 +31,53 @@ const expiringCount =
 const expiredCount =
   document.getElementById("expiredCount");
 
+const companyNameDisplay =
+  document.getElementById("companyNameDisplay");
+
+window.logout =
+async function () {
+
+  await signOut(auth);
+
+  window.location.href =
+    "index.html";
+
+};
+
 onAuthStateChanged(
   auth,
-  (user) => {
+  async (user) => {
 
   if (!user) {
 
     window.location.href =
-      "login.html";
+      "index.html";
 
     return;
+
+  }
+
+  try {
+
+    const userDoc =
+      await getDoc(
+        doc(
+          db,
+          "users",
+          user.uid
+        )
+      );
+
+    if (userDoc.exists()) {
+
+      companyNameDisplay.textContent =
+        userDoc.data().companyName || "";
+
+    }
+
+  } catch (error) {
+
+    console.log(error);
 
   }
 
@@ -123,7 +163,8 @@ onAuthStateChanged(
 
             expired++;
 
-          } else if (
+          }
+          else if (
             days <= 30
           ) {
 
