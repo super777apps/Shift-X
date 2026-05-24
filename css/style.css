@@ -16,13 +16,21 @@ header {
 }
 
 /* ===== MAIN CONTAINER ===== */
+
 .container {
   width: 100%;
-  max-width: 520px;
+  max-width: 900px;
   margin: auto;
   padding: 20px;
   box-sizing: border-box;
 }
+
+/* make login/register forms centered and not too wide */
+.auth-box {
+  max-width: 420px;
+  margin: auto;
+}
+
 
 /* ===== CENTER ===== */
 .center {
@@ -193,4 +201,38 @@ select {
     width: 100%;
   }
 
+}
+
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* compact stat card */
+.stat-card {
+  background: linear-gradient(145deg, #121212, #1b1b1b);
+  border: 1px solid rgba(255,215,0,0.18);
+  border-radius: 18px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255,215,0,0.05);
+}
+
+/* number styling */
+.stat-card span {
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 4px;
+}
+
+/* label */
+.stat-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #e5e5e5;
 }
