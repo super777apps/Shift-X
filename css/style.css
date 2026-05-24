@@ -243,3 +243,11 @@ select {
   margin-bottom: 10px;
   font-size: 14px;
 }
+
+.logo-header {
+  display: block;
+  width: 50%;
+  max-width: 200px;
+  margin: 20px auto;
+  border-radius: 20px;
+}
