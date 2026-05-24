@@ -6,14 +6,39 @@
   <title>Shift-X</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
 <div class="container center">
+
   <h1>Shift-X</h1>
   <p>Smart Workforce Coordination</p>
 
-  <a href="login.html" class="btn">Login</a>
+  <div style="margin-top:30px;">
+
+    <h2>Login</h2>
+
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+
+    <button class="btn" onclick="login()">
+      Login
+    </button>
+
+    <p id="message"></p>
+
+    <p style="margin-top:20px;">
+      Don't have an account?
+      <a href="register.html" style="color:#ffd700;">
+        Create Account
+      </a>
+    </p>
+
+  </div>
+
 </div>
+
+<script type="module" src="js/auth.js"></script>
 
 </body>
 </html>
