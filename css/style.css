@@ -5,6 +5,7 @@ body {
   color: white;
 }
 
+/* ===== HEADER ===== */
 header {
   background: linear-gradient(90deg, #111111, #1c1c1c);
   color: #ffd700;
@@ -14,15 +15,22 @@ header {
   box-shadow: 0 0 15px rgba(255,215,0,0.15);
 }
 
+/* ===== MAIN CONTAINER ===== */
 .container {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
   padding: 20px;
+  box-sizing: border-box;
 }
 
+/* ===== CENTER ===== */
 .center {
   text-align: center;
   margin-top: 120px;
 }
 
+/* ===== TEXT ===== */
 h1, h2, h3 {
   color: #ffd700;
 }
@@ -31,12 +39,14 @@ p {
   color: #e5e5e5;
 }
 
+/* ===== GRID ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
 }
 
+/* ===== CARD ===== */
 .card {
   background: linear-gradient(145deg, #111111, #1a1a1a);
   padding: 22px;
@@ -57,8 +67,10 @@ p {
     0 10px 25px rgba(0,0,0,0.6);
 }
 
+/* ===== INPUTS ===== */
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   padding: 14px;
   margin-top: 10px;
@@ -69,14 +81,17 @@ textarea {
   color: white;
   box-sizing: border-box;
   outline: none;
+  font-size: 16px;
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   border-color: #ffd700;
   box-shadow: 0 0 10px rgba(255,215,0,0.3);
 }
 
+/* ===== BUTTON ===== */
 .btn {
   display: inline-block;
   padding: 14px 24px;
@@ -94,8 +109,11 @@ textarea:focus {
     0 0 25px rgba(255,215,0,0.15);
   position: relative;
   overflow: hidden;
+  text-align: center;
+  max-width: 100%;
 }
 
+/* hover */
 .btn:hover {
   transform: scale(1.04);
   box-shadow:
@@ -103,6 +121,7 @@ textarea:focus {
     0 0 35px rgba(255,215,0,0.25);
 }
 
+/* shimmer */
 .btn::before {
   content: '';
   position: absolute;
@@ -123,6 +142,7 @@ textarea:focus {
   left: 100%;
 }
 
+/* ===== LIST ITEM ===== */
 .list-item {
   background: linear-gradient(145deg, #121212, #1b1b1b);
   padding: 18px;
@@ -132,16 +152,45 @@ textarea:focus {
   box-shadow:
     0 0 10px rgba(255,215,0,0.06),
     0 5px 15px rgba(0,0,0,0.45);
+  overflow: hidden;
 }
 
-select {
-  width: 100%;
-  padding: 14px;
+/* ===== BUTTON GROUP (FIX FOR EDIT/DELETE OVERLAP) ===== */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
   margin-top: 10px;
-  margin-bottom: 14px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,215,0,0.3);
-  background: #161616;
-  color: white;
-  box-sizing: border-box;
+}
+
+/* buttons inside list item */
+.list-item .btn {
+  width: auto;
+}
+
+/* spacing between stacked buttons */
+.list-item button {
+  margin-top: 8px;
+}
+
+/* ===== SELECT ===== */
+select {
+  cursor: pointer;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 600px) {
+
+  .container {
+    padding: 14px;
+  }
+
+  h1, h2, h3 {
+    font-size: 18px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
 }
