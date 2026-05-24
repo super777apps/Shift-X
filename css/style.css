@@ -236,3 +236,10 @@ select {
   font-size: 13px;
   color: #e5e5e5;
 }
+
+#companyNameDisplay {
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
