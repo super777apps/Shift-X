@@ -34,15 +34,27 @@ const expiredCount =
 const companyNameDisplay =
   document.getElementById("companyNameDisplay");
 
-window.logout =
-async function () {
 
-  await signOut(auth);
 
-  window.location.href =
-    "index.html";
+
+window.logout = async function () {
+
+  try {
+
+    await signOut(auth);
+
+    alert("Logged out");
+
+    window.location.href = "index.html";
+
+  } catch (error) {
+
+    alert(error.message);
+
+  }
 
 };
+
 
 onAuthStateChanged(
   auth,
