@@ -32,10 +32,11 @@ window.register = async function() {
     const user = userCredential.user;
 
     await setDoc(doc(db, "users", user.uid), {
-      companyName: name,
-      email: email,
-      createdAt: new Date()
-    });
+  companyName: name,
+  email: email,
+  phone: phone,
+  createdAt: new Date()
+});
 
     alert("Account Created");
 
