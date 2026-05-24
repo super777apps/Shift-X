@@ -1,32 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shifts</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shift Broadcast - Shift-X</title>
+
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <div class="container">
+  
+  <a href="dashboard.html" class="btn">
+  Back To Dashboard
+</a>
+  
 
   <h2>Create Shift</h2>
 
-  <input type="text" id="title" placeholder="Shift Title">
+  <label>Shift Title</label>
+  <input type="text" id="title" placeholder="Personal Care Support">
+
+  <label>Date</label>
   <input type="date" id="date">
-  <input type="time" id="time">
-  <input type="text" id="suburb" placeholder="Suburb">
 
-  <textarea id="notes" placeholder="Notes"></textarea>
+  <label>Start Time</label>
+  <input type="time" id="startTime">
 
-  <button class="btn" onclick="addShift()">Create Shift</button>
+  <label>End Time</label>
+  <input type="time" id="endTime">
 
-  <h2>Open Shifts</h2>
+  <label>Suburb</label>
+  <input type="text" id="suburb" placeholder="Liverpool">
+
+  <label>Required Skills</label>
+  <input type="text" id="skills" placeholder="Personal Care, SIL">
+
+  <label>Notes</label>
+  <textarea id="notes" placeholder="Shift notes"></textarea>
+
+  <label>
+    <input type="checkbox" id="broadcast">
+    Broadcast To Network
+  </label>
+
+  <br><br>
+
+<input
+  type="hidden"
+  id="editShiftId">
+
+<button
+  id="saveShiftBtn"
+  class="btn"
+  onclick="addShift()">
+
+  Create Shift
+
+</button>
+
+  <br><br>
+
+
+
+  <a href="shared-shifts.html" class="btn">
+    Shared Shifts
+  </a>
+
+  <h2>My Shifts</h2>
 
   <div id="shiftList"></div>
 
 </div>
 
 <script type="module" src="js/shifts.js"></script>
+
 </body>
 </html>

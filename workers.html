@@ -1,22 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Workers</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Workers - Shift-X</title>
+
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <div class="container">
 
   <h2>Add Worker</h2>
 
-  <input type="text" id="workerName" placeholder="Worker Name">
-  <input type="text" id="workerPhone" placeholder="Phone Number">
-  <input type="text" id="workerSkills" placeholder="Skills">
+  <label>Worker Name</label>
+  <input
+    type="text"
+    id="workerName"
+    placeholder="Worker Name">
 
-  <button class="btn" onclick="addWorker()">Add Worker</button>
+  <label>Phone Number</label>
+  <input
+    type="text"
+    id="workerPhone"
+    placeholder="Phone Number">
+
+  <label>Skills</label>
+  <input
+    type="text"
+    id="workerSkills"
+    placeholder="SIL, Personal Care, Community Access">
+
+  <label>Availability</label>
+  <select id="availability">
+
+    <option value="Available Now">
+      Available Now
+    </option>
+
+    <option value="Available Today">
+      Available Today
+    </option>
+
+    <option value="Available This Week">
+      Available This Week
+    </option>
+
+    <option value="Unavailable">
+      Unavailable
+    </option>
+
+  </select>
+
+ <button
+  id="saveBtn"
+  class="btn"
+  onclick="addWorker()">
+
+  Add Worker
+
+</button>
+
+  <br><br>
+
+  <a
+    href="dashboard.html"
+    class="btn">
+
+    Back To Dashboard
+
+  </a>
 
   <h2>Workers List</h2>
 
@@ -25,5 +80,6 @@
 </div>
 
 <script type="module" src="js/workers.js"></script>
+
 </body>
 </html>

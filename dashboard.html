@@ -1,35 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Shift-X Dashboard</title>
+
+<h3>
+⚠ Compliance Alerts
+</h3>
+
+
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header>
   <h1>Shift-X Dashboard</h1>
 </header>
 
-<div class="container grid">
+<div class="container">
 
-  <a class="card" href="shifts.html">
-    <h2>Shift Broadcast</h2>
-    <p>Create and manage shifts</p>
-  </a>
+  <div class="grid">
 
-  <a class="card" href="workers.html">
-    <h2>Workers</h2>
-    <p>Manage workforce</p>
-  </a>
+    <div class="card">
+      <h2 id="workerCount">0</h2>
+      <p>Workers</p>
+    </div>
 
-  <a class="card" href="credentials.html">
-    <h2>Credentials</h2>
-    <p>Track expiry dates</p>
-  </a>
+    <div class="card">
+      <h2 id="credentialCount">0</h2>
+      <p>Credentials</p>
+    </div>
+    
+    <div class="card">
+      <h2 id="shiftCount">0</h2>
+      <p>Open Shifts</p>
+    </div>
+    
+    
+    <div class="card">
+  <h2 id="expiringCount">0</h2>
+  <p>Expiring Soon</p>
+</div>
+
+<div class="card">
+  <h2 id="expiredCount">0</h2>
+  <p>Expired</p>
+</div>
+    
+    
+
+  </div>
+
+  <br>
+
+  <div class="grid">
+
+    <a class="card" href="shifts.html">
+      <h2>Shift Broadcast</h2>
+      <p>Create and manage shifts</p>
+    </a>
+
+    <a class="card" href="workers.html">
+      <h2>Workers</h2>
+      <p>Manage workforce</p>
+    </a>
+
+    <a class="card" href="credentials.html">
+      <h2>Credentials</h2>
+      <p>Track expiry dates</p>
+    </a>
+
+  </div>
 
 </div>
+
+<script type="module" src="js/dashboard.js"></script>
 
 </body>
 </html>
