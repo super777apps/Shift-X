@@ -2,15 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Shift-X Dashboard</title>
-
-<h3>
-⚠ Compliance Alerts
-</h3>
-
 
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,40 +17,42 @@ content="width=device-width, initial-scale=1.0">
 
 <div class="container">
 
-  <div class="grid">
+  <!-- ===== ALERT TITLE ===== -->
+  <h3>⚠ Compliance Alerts</h3>
 
-    <div class="card">
-      <h2 id="workerCount">0</h2>
+  <!-- ===== STATS ROW (FIXED LAYOUT) ===== -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <span id="workerCount">0</span>
       <p>Workers</p>
     </div>
 
-    <div class="card">
-      <h2 id="credentialCount">0</h2>
+    <div class="stat-card">
+      <span id="credentialCount">0</span>
       <p>Credentials</p>
     </div>
-    
-    <div class="card">
-      <h2 id="shiftCount">0</h2>
-      <p>Open Shifts</p>
-    </div>
-    
-    
-    <div class="card">
-  <h2 id="expiringCount">0</h2>
-  <p>Expiring Soon</p>
-</div>
 
-<div class="card">
-  <h2 id="expiredCount">0</h2>
-  <p>Expired</p>
-</div>
-    
-    
+    <div class="stat-card">
+      <span id="shiftCount">0</span>
+      <p>Shifts</p>
+    </div>
+
+    <div class="stat-card">
+      <span id="expiringCount">0</span>
+      <p>Expiring</p>
+    </div>
+
+    <div class="stat-card">
+      <span id="expiredCount">0</span>
+      <p>Expired</p>
+    </div>
 
   </div>
 
   <br>
 
+  <!-- ===== NAV CARDS ===== -->
   <div class="grid">
 
     <a class="card" href="shifts.html">
