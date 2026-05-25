@@ -1,7 +1,8 @@
 import { auth } from "./firebase.js";
 
 import {
-  signInWithEmailAndPassword
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 window.login = async function() {
@@ -32,3 +33,41 @@ window.login = async function() {
   }
 
 };
+
+
+document
+  .getElementById("forgotPasswordLink")
+  .addEventListener("click", async (e) => {
+
+    e.preventDefault();
+
+    const email =
+      document.getElementById("email").value.trim();
+
+    if (!email) {
+
+      alert(
+        "Please enter your email address first."
+      );
+
+      return;
+    }
+
+    try {
+
+      await sendPasswordResetEmail(
+        auth,
+        email
+      );
+
+      alert(
+        "Password reset email sent. Please check your inbox."
+      );
+
+    } catch(error) {
+
+      alert(error.message);
+
+    }
+
+  });
